@@ -1,19 +1,15 @@
 package com.example.githubsample.ui.screens.user
 
-import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.material.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
-import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.paging.compose.LazyPagingItems
 import androidx.paging.compose.collectAsLazyPagingItems
 import com.example.githubsample.data.dto.Item
 import com.example.githubsample.ui.remember.rememberFlowWithLifecycle
 
-@ExperimentalAnimationApi
-@ExperimentalComposeUiApi
 @Composable
 fun UserScreen(viewModel: UserViewModel = hiltViewModel()) {
 

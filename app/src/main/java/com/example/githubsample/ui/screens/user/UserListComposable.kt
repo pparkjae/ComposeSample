@@ -10,11 +10,13 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.paging.compose.LazyPagingItems
 import androidx.paging.compose.items
 import coil.compose.rememberImagePainter
 import com.example.githubsample.data.dto.Item
+import com.example.githubsample.data.dto.User
 import com.example.githubsample.ui.theme.cardColor
 import com.example.githubsample.ui.theme.typography
 
@@ -60,4 +62,32 @@ fun UserListItem(user: Item) {
             }
         }
     }
+}
+
+@Composable
+@Preview(showBackground = true, showSystemUi = true)
+fun ListPreview() {
+    UserListItem(
+        user = Item(
+            avatarUrl = "",
+            eventsUrl = "",
+            followersUrl = "",
+            followingUrl = "",
+            gistsUrl = "",
+            gravatarId = "",
+            htmlUrl = "https://github.com/pparkjae",
+            id = 0,
+            login = "PParkJae",
+            nodeId = "",
+            organizationsUrl = "",
+            received_eventsUrl = "",
+            reposUrl = "",
+            score = 0.toDouble(),
+            siteAdmin = true,
+            starredUrl = "",
+            subscriptionsUrl = "",
+            type = "",
+            url = "https://api.github.com/users/pparkjae"
+        )
+    )
 }

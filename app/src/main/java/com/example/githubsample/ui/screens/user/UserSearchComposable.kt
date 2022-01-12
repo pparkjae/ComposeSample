@@ -15,11 +15,10 @@ import androidx.compose.ui.focus.FocusRequester
 import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
-@ExperimentalAnimationApi
-@ExperimentalComposeUiApi
 @Composable
 fun UserSearchTopBarComposable(
     searchText: String,
@@ -72,6 +71,20 @@ fun UserSearchTopBarComposable(
     LaunchedEffect(Unit) {
         focusRequester.requestFocus()
     }
+}
+
+@Composable
+@Preview(showBackground = true, showSystemUi = true)
+fun TopBarPreview() {
+    UserSearchTopBarComposable(
+        searchText = "Preview",
+        onSearchClicked = {
+
+        },
+        onSearchTextChanged = {
+
+        }
+    )
 }
 
 

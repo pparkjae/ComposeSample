@@ -48,7 +48,9 @@ fun UserListItem(user: Item) {
                     data = user.avatarUrl
                 ),
                 contentDescription = "Git User Icon",
-                modifier = Modifier.size(100.dp)
+                modifier = Modifier
+                    .size(100.dp)
+                    .align(Alignment.CenterVertically)
             )
 
             Column(

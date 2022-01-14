@@ -26,7 +26,7 @@ class UserPagingSource constructor(
                 LoadResult.Page(
                     data = user.items,
                     prevKey = null,
-                    nextKey = if (1000 < pageNumber * params.loadSize) null else pageNumber + 1
+                    nextKey = if (1000 < pageNumber * params.loadSize || user.items.size < params.loadSize) null else pageNumber + 1
                 )
             } else {
                 LoadResult.Page(
